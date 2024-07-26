@@ -8,6 +8,8 @@ Usage:
 """
 from tkinter import *
 from tkinter import ttk
+from tkinter import Tk, ttk, messagebox
+from poke_api import get_pokemon_info
 
 # Create the main window
 root = Tk()
