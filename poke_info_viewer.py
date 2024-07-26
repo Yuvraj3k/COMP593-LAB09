@@ -6,8 +6,7 @@ Description:
 Usage:
   python poke_info_viewer.py
 """
-from tkinter import *
-from tkinter import ttk
+
 from tkinter import Tk, ttk, messagebox
 from poke_api import get_pokemon_info
 
@@ -26,7 +25,12 @@ stats = ttk.LabelFrame(root, text="Stats")
 stats.grid(row=1, column=1, sticky="N", padx=(5, 10), pady=(5, 10))
 
 
-# TODO: Populate the user input frame with widgets
+# Populate the user input frame with widgets
+input_lbl = ttk.Label(input, text="Pokemon Name:")
+input_lbl.grid(row=0, column=0, padx=(10,5), pady=10)
+
+input_ent = ttk.Entry(input)
+input_ent.grid(row=0 ,column=1, padx=5, pady=10)
 
 # TODO: Define button click event handler function
 
