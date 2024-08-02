@@ -10,27 +10,23 @@ Usage:
 from tkinter import Tk, ttk, messagebox
 from poke_api import get_pokemon_info
 
+
 # Create the main window
 root = Tk()
 root.title("Pokemon Information")
-
+root.resizable(False,False)
 # Create the frames
 input = ttk.Frame(root)
-input.grid(row=0, column=0, columnspan=2)
+input.grid(row=0, column=0, columnspan=2, pady=(20,10))
+#frame for info
+info=ttk.LabelFrame(root, text='info')
+info.grid(row=1,column=0,padx=(20,10),pady=(10,20), sticky='N' )
 
-info = ttk.LabelFrame(root, text="Info")
-info.grid(row=1, column=0, sticky="N", padx=(5, 10), pady=(5, 10))
-
-stats = ttk.LabelFrame(root, text="Stats")
-stats.grid(row=1, column=1, sticky="N", padx=(5, 10), pady=(5, 10))
-
-
+#frame for stats 
+stats=ttk.LabelFrame(root, text='stats')
+stats.grid(row=1,column=1,padx=(10,20),pady=(10,20), sticky='N') 
 # Populate the user input frame with widgets
-input_lbl = ttk.Label(input, text="Pokemon Name:")
-input_lbl.grid(row=0, column=0, padx=(10,5), pady=10)
 
-input_ent = ttk.Entry(input)
-input_ent.grid(row=0 ,column=1, padx=5, pady=10)
 
 # TODO: Define button click event handler function
 
